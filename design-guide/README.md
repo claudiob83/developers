@@ -1,4 +1,4 @@
-# MicroApp Design Guide
+# Micro-App Visual Guide
 
 
 
