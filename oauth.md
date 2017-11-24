@@ -31,7 +31,7 @@ The Allthings platform supports two authorization grant types:
 > Please replace `api-sandbox.allthings.me` in the following sections with the
 > domain of the Allthings app you want to authorize against.  
 > Please also replace `www.example.com` with the domain of your
-> [MicroApp](micro-app.md) or widget.
+> [Micro-App](micro-app.md) or widget.
 
 ## Authorization Code Grant
 
@@ -39,11 +39,11 @@ Is to be used when a server acts as OAuth2 client and the client should have a
 long term API access on behalf of the user. Invalid or expired access tokens can
 be refreshed.
 
-**This is the preferred authorization grant type for MicroApps.**
+**This is the preferred authorization grant type for Micro-Apps.**
 
 ### 1. Authorization
 
-When the user wants to use the 3rd-party application (i.e. the MicroApp), they
+When the user wants to use the 3rd-party application (i.e. the Micro-App), they
 get redirected to the authorisation endpoint first:
 
 ```
@@ -57,7 +57,7 @@ Key           | Value
 --------------|----------------------------------------------------------------
 client_id     | Will be provided by Allthings, `xxxxxx` in the example below
 response_type | `code`
-redirect_uri  | The MicroApp URL, e.g. `https://www.example.com`
+redirect_uri  | The Micro-App URL, e.g. `https://www.example.com`
 
 **Example URL:**
 
@@ -65,13 +65,13 @@ redirect_uri  | The MicroApp URL, e.g. `https://www.example.com`
 https://api-sandbox.allthings.me/auth/authorize?client_id=xxxxxx&response_type=code&redirect_uri=https%3A%2F%2Fwww.example.com
 ```
 
-As MicroApps usually run inside the context of the Allthings app, the user is
+As Micro-Apps usually run inside the context of the Allthings app, the user is
 already authenticated at this point. If not, the user is redirected to a login
 form.
 
 After the user is authenticated, Allthings prompts the user to authorize your
-MicroApp to access their data. The user can accept or decline your app and also
-define the scope of data access for your MicroApp.
+Micro-App to access their data. The user can accept or decline your app and also
+define the scope of data access for your Micro-App.
 
 **Notice**
 > If the user has already authorized your app, this step is skipped.  
